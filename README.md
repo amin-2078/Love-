@@ -1,0 +1,1 @@
+This Love Calculator lets you check the compatibility between you and your loved one by entering your names. Just type the names and click 'Calculate' to find out how strong and fun your love connection is. It's a fun tool to share joyful moments with friends and loved ones. Let this playful love calculator bring a smile to your face."
