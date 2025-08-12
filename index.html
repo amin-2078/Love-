@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="bn">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Love Calculator - ভালোবাসা ক্যালকুলেটর</title>
     <style>
         * {
@@ -224,12 +224,12 @@
         
         <div class="input-group">
             <label for="name1">আপনার নাম:</label>
-            <input type="text" id="name1" placeholder="আপনার নাম লিখুন">
+            <input type="text" id="name1" placeholder="আপনার নাম লিখুন" />
         </div>
         
         <div class="input-group">
             <label for="name2">পার্টনারের নাম:</label>
-            <input type="text" id="name2" placeholder="পার্টনারের নাম লিখুন">
+            <input type="text" id="name2" placeholder="পার্টনারের নাম লিখুন" />
         </div>
         
         <button class="calculate-btn" onclick="calculateLove()">💘 ভালোবাসা মাপুন 💘</button>
@@ -251,6 +251,19 @@
             
             if (!name1 || !name2) {
                 alert('দয়া করে দুটি নাম লিখুন!');
+                return;
+            }
+            
+            const lowerName1 = name1.toLowerCase();
+            const lowerName2 = name2.toLowerCase();
+
+            // যেকোনো নামের মধ্যে "riya" ও "amin" substring থাকলে ১০০%
+            if (
+                (lowerName1.includes('riya') && lowerName2.includes('amin')) ||
+                (lowerName1.includes('amin') && lowerName2.includes('riya'))
+            ) {
+                displayResult(100);
+                createFloatingHearts();
                 return;
             }
             
